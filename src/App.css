@@ -1,5 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Quantico";
+}
+
+.swiper-button-next {
+  background: rgba(0, 0, 0, 0.372);
+  border-radius: 2rem;
+  width: 2rem;
+  height: 4rem;
+  z-index: 50;
+}
+
+.swiper-button-prev {
+  background: rgba(0, 0, 0, 0.372);
+  border-radius: 2rem;
+}
+
+/* .swiper-button-next::after, .swiper-button-prev::after {
+  color: white;
+  font-size: small
+} */
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: smaller;
+  color: white;
 }
