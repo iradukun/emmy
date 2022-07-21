@@ -4,9 +4,9 @@ import LatestWork from './latestWork'
 const LatestWorks = () => {
   const [latestWorksData, setLatestWorksData] = useState([
     { type: 'fashion', active: false, image: 'pf-1.jpg' },
-    { type: 'lifestyle', active: false, image: 'pf-2.jpg' },
-    { type: 'Natural', active: false, image: 'pf-3.jpg' },
     { type: 'Wedding', active: false, image: 'pf-4.jpg' },
+    { type: 'Natural', active: false, image: 'pf-3.jpg' },
+    { type: 'lifestyle', active: false, image: 'pf-2.jpg' },
     { type: 'Videos', active: false, image: 'pf-7.jpg' },
     { type: 'Videos', active: false, image: 'pf-8.jpg' },
     { type: 'Natural', active: false, image: 'pf-9.jpg' },
@@ -38,9 +38,9 @@ const LatestWorks = () => {
 
 
   return (
-    <div className='w-full h-[200vh] flex flex-col items-center '>
+    <div className='w-full h-[150vh] flex flex-col items-center '>
         <div className='w-full h-[10rem] bg-[yellow]'></div>
-        <div className='gallery'>
+        <div className='gallery container'>
             {latestWorks}
         </div>
         <button className='py-4 mt-4 px-8 text-white bg-black uppercase '>Load more</button>
