@@ -92,7 +92,7 @@ const LatestWorks = () => {
           <span className='latestSpan text-4xl font-black uppercase'>our latest works</span>
           <Filter activeImageType={activeImageType} setActiveImageType={setActiveImageType} setFiltered={setFiltered} latestWorksData={latestWorksData} />
         </div>
-        <motion.div layout className='gallery '>
+        <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0}} exit={{opacity: 0}} layout className='gallery '>
           {latestWorks}
         </motion.div>
           {filtered.map((latestWorkData, index) =>{
@@ -101,7 +101,7 @@ const LatestWorks = () => {
               <CloseIcon onClick={()=>closeModal(latestWorkData.image)} className='text-white cursor-pointer' />
             </div>
           })}
-        <button className='py-4 mt-4 px-8 text-white bg-black uppercase '>Load more</button>
+        <button className='py-4 mt-4 w-[20rem] text-white bg-black uppercase '>Load more</button>
     </div>
   )
 }
