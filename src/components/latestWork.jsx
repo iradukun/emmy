@@ -1,12 +1,14 @@
 import React from 'react'
 import Fade from 'react-reveal';
 import AddIcon from '@mui/icons-material/Add';
+import { motion } from 'framer-motion'
+
 
 const LatestWork = (props) => {
-  const { data, handleActive, handleInActive, openModal, closeModal } = props;
+  const { data, handleActive, handleInActive, openModal } = props;
 
   return (
-    <div className='transition-all duration-[350ms] ease-in cursor-pointer mb-[12px] relative' onMouseEnter={()=>handleActive(data.image)} onMouseLeave={()=>handleInActive(data.image)} > 
+    <motion.div layout className='cursor-pointer mb-[12px] relative' onMouseEnter={()=>handleActive(data.image)} onMouseLeave={()=>handleInActive(data.image)} > 
 
         <div className={`absolute w-full h-full flex flex-col items-center justify-center bg-${data.active === true ? '[#00000088]' : 'transparent'} transition-all duration-500 `} >
           <AddIcon className='text-white' style={{display: data.active ? 'block' : 'none'}} onClick={()=>openModal(data.image)} />
@@ -20,7 +22,7 @@ const LatestWork = (props) => {
 
         <img src={`/assets/images/${data.image}`} className='w-full max-h-[40rem] transition-all duration-500' alt=""  />
         
-    </div>
+    </motion.div>
   )
 }
 
