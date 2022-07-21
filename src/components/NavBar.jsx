@@ -19,7 +19,7 @@ const NavBar = () => {
   }
 
   const navbarItems = navbarItemsData.map((navbarItemData, index) =>{
-    return <Link to={`/${navbarItemData.name}`} onClick={()=>handleLinkClick(navbarItemData.name)} className={ `mx-4 py-8 border-b-${navbarItemData.active ? '[green]' : 'white' } border-b-4 hover:border-b-[green] text-lg transition duration-500`} key={index}>{navbarItemData.name}</Link>
+    return <Link to={`/${navbarItemData.name}`} onClick={()=>handleLinkClick(navbarItemData.name)} className={ `mx-4 py-8 border-b-${navbarItemData.active ? '[green]' : 'transparent' } border-b-4 hover:border-b-[green] text-lg transition duration-500`} key={index}>{navbarItemData.name}</Link>
   })
 
   return (
