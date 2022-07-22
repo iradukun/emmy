@@ -3,6 +3,7 @@ import CottageIcon from '@mui/icons-material/Cottage';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { Link } from 'react-router-dom';
 import PricingCard from '../components/PricingCard';
+import FAQuestions from '../components/FAQuestions';
 
 const Pricing = () => {
 
@@ -19,7 +20,7 @@ const Pricing = () => {
 
 
   return (
-    <div className='w-full h-[150vh] bg-re-300 flex flex-col'>
+    <div className='w-full h-[160vh] flex flex-col'>
       <div className='w-full h-[10rem] flex items-center justify-start px-[10rem] '>
         <div className='flex items-center justify-center '>
           <CottageIcon fontSize='' className='mr-2' />
@@ -38,7 +39,7 @@ const Pricing = () => {
           {pricingPlans}
         </div>
       </div>
-      <div className=''></div>
+      <FAQuestions />
     </div>
   )
 }

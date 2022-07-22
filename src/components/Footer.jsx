@@ -40,7 +40,7 @@ const Footer = () => {
           })}
         </div>
       </div>
-      <div className='w-[20rem] h-[70%] flex flex-col items-start justify-center p-8 gap-[2.5rem]'>
+      <div className='w-[20rem] h-[70%] flex flex-col items-start justify-center p-8 gap-[2.5rem] '>
         <span className='text-white text-xl text-start uppercase font-black'>Quick links</span>
         <div className='w-full h-fit grid grid-cols-2'>
           {['Home', 'About', 'Contact', 'Gallery', 'Portifolio', 'Services'].map(link=>{
@@ -58,6 +58,8 @@ const Footer = () => {
           </button>
         </form>
       </div>
+
+      <div className='w-[80%'></div>
     </div>
   )
 }

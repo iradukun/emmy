@@ -50,6 +50,20 @@
   transform: rotateZ(-45deg);
 }
 
+.dropDown {
+  animation: animateDropDown 1s ease;
+}
+
+@keyframes animateDropDown {
+  from {
+    top: 7rem;
+  }
+
+  to {
+    top: 6rem;
+  }
+}
+
 @media (max-width: 991px) {
   .gallery {
     column-count: 2

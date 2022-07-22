@@ -10,7 +10,7 @@ const LatestWork = (props) => {
   return (
     <motion.div layout className='w-full cursor-pointer mb-[12px] relative' onMouseEnter={()=>handleActive(data.image)} onMouseLeave={()=>handleInActive(data.image)} > 
 
-        <div className={`absolute w-full h-full flex flex-col items-center justify-center bg-${data.active === true ? '[#00000088]' : 'transparent'} transition-all duration-500 `} >
+        <div className={`absolute w-full h-full flex flex-col items-center justify-center bg-${data.active === true ? '[#000000b1]' : 'transparent'} transition-all duration-500 `} >
           <AddIcon className='text-white cursor-pointer' style={{display: data.active ? 'block' : 'none'}} onClick={()=>openModal(data.image)} />
           <Fade bottom >
             <div className='  absolute bottom-0 flex flex-col items-center justify-center p-4 gap-3' style={{display: data.active ? 'flex' : 'none'}}>
