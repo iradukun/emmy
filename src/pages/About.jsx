@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CottageIcon from '@mui/icons-material/Cottage';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Link } from 'react-router-dom';
 import Reason from '../components/Reason';
+import { IconButton } from '@mui/material';
+import VideoPopUp from '../components/VideoPopUp';
 
 const About = () => {
+
+  const [videoPopUp, setVideoPopUp] = useState(false);
 
   const reasonsData = [
     {imgSrc: 'list-1.png', title: 'professionalism', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.'},
@@ -18,8 +23,19 @@ const About = () => {
   })
 
 
+  const openVideoPopUp = () => {
+    setVideoPopUp(true);
+  }
+
+  const closeVideoPopUp = () => {
+    setVideoPopUp(false);
+  }
+
+
   return (
     <div className='w-full h-[250vh] flex flex-col'>
+      {videoPopUp && <VideoPopUp closePopUp={closeVideoPopUp} />}
+
       <div className='w-full h-[10rem] flex items-center justify-start px-[10rem] '>
         <div className='flex items-center justify-center '>
           <CottageIcon fontSize='' className='mr-2' />
@@ -30,7 +46,13 @@ const About = () => {
       </div>
 
       <div className='w-full h-[97vh] bg-red-500 flex'>
-        <div className='w-1/2 h-full bg-cover object-cover' style={{ backgroundImage: "url('/assets/images/about-pic.jpg')"}}></div>
+        <div className='w-1/2 h-full bg-cover object-cover relative' style={{ backgroundImage: "url('/assets/images/about-pic.jpg')"}}>
+          <div className='w-[5rem] h-[5rem] bg-green-500 cursor-pointer rounded-full grid place-items-center absolute right-[-2rem] bottom-96'>
+            <IconButton onClick={openVideoPopUp}>
+              <PlayArrowIcon className='text-white' fontSize='large' />
+            </IconButton>
+          </div>
+        </div>
         <div className='w-1/2 h-full bg-[#f6f6f6] flex flex-col items-center justify-center gap-[2rem]'>
           <div className='flex flex-col items-start justify-center gap-8 px-12'>
             <div className=''>
