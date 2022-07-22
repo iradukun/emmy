@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const NavBar = () => {
 
-  const [navbarItemsData, setNavbarItemsData] = useState([{name: 'Home', active: true},{name: 'About', active: false}, {name: 'Services', active: false}, {name: 'Pricing', active: false}, {name: 'portifolio', active: false}, {name: 'Blog', active: false }, {name: 'Pages', active: false}, {name: 'Contact', active: false}])
+  const [navbarItemsData, setNavbarItemsData] = useState([{name: 'Home', active: false},{name: 'About', active: false}, {name: 'Services', active: false}, {name: 'Pricing', active: false}, {name: 'portifolio', active: false}, {name: 'Blog', active: false }, {name: 'Pages', active: false}, {name: 'Contact', active: false}])
 
   const [dropDown, setDropdownOpen] = useState(false);
 
@@ -18,7 +18,6 @@ const NavBar = () => {
         return prevNavBarItemData.name === id ? {...prevNavBarItemData, active: true} : prevNavBarItemData;
       })
     })
-    
   }
 
   const openDropDown = () =>{
@@ -30,7 +29,7 @@ const NavBar = () => {
   }
 
   const navbarItems = navbarItemsData.map((navbarItemData, index) =>{
-    return navbarItemData.name === 'Pages' ?<Link to={`#`} onClick={()=>handleLinkClick(navbarItemData.name)} className={ `mx-4 py-8  border-b-4 hover:border-b-[green] text-lg transition duration-500 relative`} style={{borderBottom: navbarItemData.active && '4px solid green'}} key={index} onMouseEnter={ openDropDown} onMouseLeave={ closeDropDown } >{navbarItemData.name}
+    return navbarItemData.name === 'Pages' ?<Link to={`#`} onClick={()=>handleLinkClick(navbarItemData.name)} className={ `mx-4 py-8  border-b-4 hover:border-b-[green] border-b-white text-lg transition duration-500 relative`} style={{borderBottom: navbarItemData.active && '4px solid green'}} key={index} onMouseEnter={ openDropDown} onMouseLeave={ closeDropDown } >{navbarItemData.name}
       {dropDown && <div className='dropDown w-[10rem] h-fit absolute top-[6rem] z-40 bg-black flex flex-col items-start justify-center animate-pulse' >
         <Link to='/Gallery' className='text-white text-sm py-2 px-4'>Gallery</Link>
         <Link to='/Portifolio' className='text-white text-sm py-2 px-4'>Portifolio details</Link>

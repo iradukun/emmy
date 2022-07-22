@@ -17,11 +17,8 @@ const FAQuestions = () => {
   })
 
   return (
-    <div className='w-full h-[60vh] flex flex-col items-center justify-center gap-16'>
-      <span className='text-3xl text-center uppercase font-black'>frequently asked questions</span>
-      <div className='w-full h-[20rem] grid grid-cols-2 grid-rows-3 gap-x-0 gap-y-16 place-items-center px-32'>
-        {faQuestions}
-      </div>
+    <div className='w-full h-[25rem] py-8 grid grid-cols-2 grid-rows-3 gap-x-0 gap-y-16 place-items-center px-32 '>
+      {faQuestions}
     </div>
   )
 }

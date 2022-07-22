@@ -39,7 +39,10 @@ const Pricing = () => {
           {pricingPlans}
         </div>
       </div>
-      <FAQuestions />
+      <div className='w-full h-[60vh] flex flex-col items-center justify-center gap-16'>
+        <span className='text-3xl text-center uppercase font-black'>frequently asked questions</span>
+        <FAQuestions />
+      </div>
     </div>
   )
 }
