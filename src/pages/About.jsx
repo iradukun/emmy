@@ -9,7 +9,7 @@ import Testimonials from '../components/Testimonials';
 
 const About = () => {
   return (
-   <div className='w-full h-[320vh] flex flex-col items-center'>
+   <div className='w-full h-[320vh] flex flex-col items-center transition-all duration-500'>
 
       <div className='w-full h-[10rem] flex items-center justify-start px-[10rem] '>
         <div className='flex items-center justify-center '>

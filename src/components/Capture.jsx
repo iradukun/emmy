@@ -30,7 +30,7 @@ const About = () => {
 
 
   return (
-     <div className='w-full h-[97vh] bg-red-500 flex'>
+     <div className='w-full h-[97vh] flex transition-all duration-500'>
       {videoPopUp && <VideoPopUp closePopUp={closeVideoPopUp} />}
 
         <div className='w-1/2 h-full bg-cover object-cover relative' style={{ backgroundImage: "url('/assets/images/about-pic.jpg')"}}>

@@ -7,7 +7,7 @@ import LatestWorks from '../components/LatestWorks'
 
 const Home = () => {
   return (
-    <div className='w-full h-fit overflow-hidden'>
+    <div className='Home  w-full h-fit overflow-hidden'>
       <Hero />
       <Categories />
       <LatestWorks />

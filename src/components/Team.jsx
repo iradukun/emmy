@@ -30,4 +30,5 @@ const Team = () => {
   )
 }
 
-export default Team
+export default Team;
+

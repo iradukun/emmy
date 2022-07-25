@@ -76,3 +76,42 @@
     column-width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .Navbar {
+    background: white;
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
+  }
+
+  .Home {
+    background: white;
+  }
+}
+
+@media (max-width: 991PX) {
+  .Navbar {
+    background: white;
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
+  }
+
+  .Navbar a {
+    font-size: .9em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Navbar {
+    background: white;
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: ) {
+  
+}
