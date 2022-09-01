@@ -45,7 +45,8 @@ const Gallery = () => {
     { type: 'Videos', active: false, image: 'gallery-1.jpg', modalOpen: false },
     { type: 'Fashion', active: false, image: 'gallery-12.jpg', modalOpen: false },
     { type: 'Lifestyle', active: false, image: 'gallery-13.jpg', modalOpen: false },
-  ])
+  ]);
+  
   const [activeImageType, setActiveImageType] = useState('All')
 
   const handleActive = (id) =>{

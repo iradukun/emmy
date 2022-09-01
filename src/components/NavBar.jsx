@@ -75,11 +75,11 @@ const NavBar = () => {
       :
         <div className='flex-[1]'>
           <MenuIcon className='hover:cursor-pointer' />
-          <div></div>
         </div>
       }
     </div>
   )
 }
 
-export default NavBar
+export default NavBar;
+

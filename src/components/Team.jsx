@@ -8,10 +8,9 @@ const Team = () => {
     {imgSrc: 'team-3.jpg', name: 'Anne-marie', role: 'Manager', socialMediaUrls: ['facebook', 'twitter.com', 'youtube.com', 'instagram.com' ]},
     {imgSrc: 'team-4.jpg', name: 'Billie Eilish', role: 'Assistant', socialMediaUrls: ['facebook', 'twitter.com', 'youtube.com', 'instagram.com' ]},
   ]
-
   const teamMembers = teamMembersData.map((teamMemberData, index) =>{
     return <TeamMember data={teamMemberData} key={index} />
-  })
+  });
 
   return (
     <div className='w-full h-[50rem] bg-[blu] flex flex-col items-center justify-center gap-4 '>
@@ -31,4 +30,3 @@ const Team = () => {
 }
 
 export default Team;
-
